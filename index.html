@@ -1,0 +1,23 @@
+<html>
+<body>
+<style>
+.error{
+    color:#ff0000;
+}
+</style>
+<p><span class="error">* required field</span>
+<form action="filter.php" method="post">
+
+    Name:   <input type="text" name="name">
+            <span class="error">*  <?php  echo $_GET['errorname']; ?></span><br>
+            <br><br>
+    Class:  <input type="text" name="class">
+            <span class="error">*  <?php echo $_GET['errorclass'];?></span><br>
+            <br><br>
+    E-mail: <input type="text" name="email" size="50">
+            <span class="error">*  <?php echo $_GET['erroremail'];?></span><br>
+            <input type="submit">
+</form>
+
+</body>
+</html>
